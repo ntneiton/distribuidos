@@ -27,6 +27,11 @@ public class Multicast{
                         lendo.start();
                         // Cria thread de escrita
                        
+                        Escrita es = new Escrita();
+                        Thread escrevendo = new Thread(es);
+                        escrevendo.start();
+                        
+                        
                         System.out.println("Escreva o que deseja enviar e digite enter");  
                            nome = nome + ":";//adciona diz a mensagem
                           do{
